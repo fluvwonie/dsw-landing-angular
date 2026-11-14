@@ -1,0 +1,24 @@
+<main class="container py-5">
+  <section class="text-center mb-5">
+    <h1 class="display-4 fw-bold">Desarrollo de Sitios Web</h1>
+    <p class="lead mt-3">
+      Aprende a construir aplicaciones web modernas con Angular.
+      Esta landing page es una SPA estática con navegación entre pantallas,
+      hecha con Bootstrap, Bootstrap Icons y Angular Material.
+    </p>
+  </section>
+
+  <section class="row g-4">
+    @for (tec of tecnologias; track tec.nombre) {
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi {{ tec.icono }} display-3"></i>
+            <h5 class="card-title mt-3">{{ tec.nombre }}</h5>
+            <p class="card-text">{{ tec.descripcion }}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </section>
+</main>
